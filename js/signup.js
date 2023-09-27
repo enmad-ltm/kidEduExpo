@@ -1,6 +1,7 @@
 const signupForm = document.querySelector('.signup');
 const signupRes = {};
 
+
 $('.agreement-wrap .accordion').on("click", function(){
     console.log('this:', );
     if ($(this).parent().parent().parent().find('.panel').css('display') === "block") {
@@ -29,16 +30,6 @@ $('.agreement .next').on('click', function(){
     let compLeng = $('.comp-list input:checked').length;
     let compList = $('.comp-list .comp-list__comp').length;
 
-    $('.actions li.disabled a').on('click',function(){
-        console.log('this attr:', $(this).parent().attr('aria-disabled'));
-        if($(this).parent().attr('aria-disabled') == 'true'){
-            console.log('true!');
-        } else {
-            console.log('false!');
-        }
-    });
-
-
     if(!isChk){
         alert('개인정보 수집 및 이용에 동의해주세요.');
         return false;
@@ -65,6 +56,7 @@ $('.agreement .next').on('click', function(){
         signupRes.subsidiarySeqList = $('.comp-list input:checked').val();
     }
 
+
     console.log('signupRes.subsidiarySeqList:', signupRes.subsidiarySeqList);
 
     $('.agreement').addClass('d-none');
@@ -72,13 +64,24 @@ $('.agreement .next').on('click', function(){
     $('.signup__img-wrap').removeClass('d-none');
 
 
+
+    if($('#wizard li.first.current').length === 1){
+        $('.actions li.disabled').on('click',function(){
+            if ($('.actions li.disabled').children('a').css('background-color') === 'rgb(163, 178, 182)'){
+                doReload();
+            }
+        });
+    }
+
 });
+
+function doReload(){
+    location.reload();
+}
 
 $(document).ready(function(){
 if($('#wizard').length > 0){
-
-
-        
+     
     window.parsley.addValidator('uniqueEmail', {
         validateString: function(val){
             let isDuplicate = mailDupChk();
@@ -151,6 +154,7 @@ if($('#wizard').length > 0){
         },
         onStepChanging: function (event, currentIndex, newIndex) {
             if (newIndex < currentIndex) {
+                console.log('return true');
                 return true;
             } else if (newIndex > currentIndex) {
                 const bgEl = $('.signup__img__bg');
@@ -160,6 +164,7 @@ if($('#wizard').length > 0){
                         var emailIp = $('#email').parsley();                        
                         var passIp = $('#pass').parsley();
                         var passChkIp = $('#passConfirm').parsley();
+                        $(this).parent().attr('aria-disabled', 'true');
 
                         console.log('emailIp:',emailIp);
 
