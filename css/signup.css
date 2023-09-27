@@ -1,0 +1,475 @@
+@charset "UTF-8";
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+.signup {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.21);
+  width: 720px;
+  height: unset;
+  padding: 40px;
+  overflow: auto;
+}
+@media (max-width: 576px) {
+  .signup {
+    width: 100vw;
+    background-color: #fff;
+    border-radius: 3px;
+    height: 70%;
+    box-shadow: unset;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+  }
+}
+.signup .agreement .tx-right {
+  padding: 1rem 0;
+  color: #222;
+  font-weight: bold;
+}
+.signup .agreement .radio__group {
+  padding: 0 1rem;
+}
+.signup .agreement .radio__group .row .agreement-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.signup .agreement .radio__group .row .agreement-wrap .accordion {
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  width: auto;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: block;
+}
+.signup .agreement .radio__group .row .agreement-wrap .accordion p {
+  font-size: 14px;
+  color: #444;
+}
+.signup .agreement .radio__group .row .agreement-wrap .accordion .acc-arrw {
+  font-size: 0.25rem;
+}
+.signup .agreement .radio__group .row .agreement-wrap .accordion:hover {
+  font-weight: bold;
+}
+.signup .agreement .radio__group .row .agreement-wrap .check-form {
+  display: flex;
+  align-items: center;
+}
+.signup .agreement .radio__group .row .agreement-wrap h4 {
+  color: #444;
+  margin: 0;
+}
+.signup .agreement .radio__group .row .panel {
+  padding: 0;
+  background-color: white;
+  display: none;
+  overflow: auto;
+  max-height: 10rem;
+  margin: 0 0 1rem;
+}
+.signup .agreement .radio__group .row .panel p {
+  margin: 0;
+}
+.signup .agreement .radio__group .consignment h4 {
+  color: #444;
+  margin: 1rem 0;
+}
+.signup .agreement .radio__group .consignment .comp-list {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.signup .agreement .radio__group .consignment .comp-list__comp {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+}
+.signup .agreement .radio__group .consignment .comp-list__comp input {
+  opacity: 0;
+  position: absolute;
+}
+.signup .agreement .radio__group .consignment .comp-list__comp input:checked + .comp-list__comp__item {
+  border: 4px solid #0866C6;
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item.item01 {
+  background-image: url("../img/smp-logo-01.png");
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item.item02 {
+  background-image: url("../img/smp-logo-02.png");
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item.item03 {
+  background-image: url("../img/smp-logo-03.png");
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item.item04 {
+  background-image: url("../img/smp-logo-04.png");
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item.item05 {
+  background-image: url("../img/smp-logo-05.png");
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  padding: 0.25rem;
+  border: 1px solid #a3b2b6;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+.signup .agreement .radio__group .consignment .comp-list__comp__item:hover {
+  background-color: #ededed;
+}
+.signup .agreement .radio__group .consignment p {
+  padding: 0 0 0 1rem;
+  font-size: 14px;
+}
+.signup .agreement .btn-wrap {
+  margin: 2rem 0;
+  text-align: center;
+}
+.signup .agreement .btn-wrap button {
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 40%;
+}
+@media (max-width: 576px) {
+  .signup .agreement .btn-wrap button {
+    display: block;
+    width: 75%;
+    margin: 0.5rem auto;
+  }
+}
+.signup .agreement .btn-wrap button.next {
+  background-color: #0866C6;
+  border-color: #0866C6;
+}
+.signup .agreement .btn-wrap button.prev {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.65;
+}
+.signup #wizard {
+  padding: 2rem;
+}
+.signup #wizard > .steps {
+  margin-bottom: 10px;
+}
+.signup #wizard > .steps > ul {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+.signup #wizard > .steps > ul li {
+  float: none;
+  display: block;
+  width: auto;
+}
+.signup #wizard > .steps > ul li .current-info {
+  display: none;
+}
+.signup #wizard > .steps > ul li .title {
+  margin-left: 5px;
+  white-space: nowrap;
+}
+.signup #wizard > .steps > ul li + li {
+  margin-left: 5px;
+}
+.signup #wizard > .steps a,
+.signup #wizard > .steps a:hover,
+.signup #wizard > .steps a:active {
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef;
+  padding: 12px 15px;
+}
+.signup #wizard > .steps a .number,
+.signup #wizard > .steps a:hover .number,
+.signup #wizard > .steps a:active .number {
+  flex-shrink: 0;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  line-height: 1.8;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #adb5bd;
+}
+.signup #wizard > .steps .disabled {
+  display: inline-block;
+}
+.signup #wizard > .steps .disabled a,
+.signup #wizard > .steps .disabled a:hover,
+.signup #wizard > .steps .disabled a:active {
+  color: #adb5bd;
+}
+.signup #wizard > .steps .disabled .title {
+  display: none;
+}
+.signup #wizard > .steps .current a, .signup #wizard > .steps .current a:hover, .signup #wizard > .steps .current a:active {
+  background-color: #657e85;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.signup #wizard > .steps .current a .title, .signup #wizard > .steps .current a:hover .title, .signup #wizard > .steps .current a:active .title {
+  display: none;
+}
+.signup #wizard > .steps .current a .number, .signup #wizard > .steps .current a:hover .number, .signup #wizard > .steps .current a:active .number {
+  border-color: #fff;
+}
+.signup #wizard > .steps .current a .number {
+  border-radius: 50%;
+}
+.signup #wizard > .steps .done a, .signup #wizard > .steps .done a:hover, .signup #wizard > .steps .done a:active {
+  background-color: #a3b2b6;
+  color: #fff;
+}
+.signup #wizard > .steps .done a .title, .signup #wizard > .steps .done a:hover .title, .signup #wizard > .steps .done a:active .title {
+  display: none;
+}
+.signup #wizard > .steps .done a .number, .signup #wizard > .steps .done a:hover .number, .signup #wizard > .steps .done a:active .number {
+  border-color: #fff;
+  border-radius: 50%;
+}
+.signup #wizard > .content {
+  background-color: #fff;
+  min-height: 150px;
+  padding: 20px;
+  border-radius: 3px;
+}
+.signup #wizard > .content > .title {
+  font-size: 18px;
+  color: #777;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: "HANAMDAUM";
+  display: none;
+}
+.signup #wizard > .content > .title.current {
+  display: block;
+}
+.signup #wizard > .content > .body {
+  float: none;
+  position: static;
+  width: auto;
+  height: auto;
+}
+.signup #wizard > .content > .body input.form-control {
+  display: block;
+  width: 100%;
+  height: calc(2.6125rem + 2px);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.signup #wizard > .content > .body input.parsley-error {
+  border-color: #DC3545;
+}
+.signup #wizard > .content > .body input.parsley-error + ul {
+  list-style: none !important;
+  padding: 0.5rem;
+}
+.signup #wizard > .content > .body input::placeholder {
+  color: #a3b2b6;
+}
+.signup #wizard > .content > .body .form-group {
+  /*
+                      .form-control.dup-chk-input {
+                          width: 74%;
+                          display: inline-block;
+                          margin-bottom: 1rem;
+                      }
+                      button.dup-chk {
+                          width: 25%;
+                          display: inline-block;
+                          margin-bottom: 0.2rem;
+                          background-color: #8fd5b0;
+
+                          @include mobile {
+                              width: 24%;
+                              font-size: 0.7rem;
+                          }
+                      }
+  */
+}
+.signup #wizard > .content > .body .form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.signup #wizard > .content > .body .form-group .form-control {
+  margin-bottom: 0.75rem;
+}
+.signup #wizard > .content > .body .form-group button {
+  overflow: visible;
+  text-transform: none;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0081b7;
+  cursor: pointer;
+}
+.signup #wizard > .content > .body .form-group select#signupSelect {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+.signup #wizard > .content > .body .form-group .multi-select {
+  margin: 1rem 0;
+}
+.signup #wizard > .content > .body .form-group .multi-select label.ckbox {
+  margin-bottom: 1rem;
+}
+.signup #wizard > .actions {
+  margin-top: 10px;
+}
+.signup #wizard > .actions > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.signup #wizard > .actions > ul > li:last-child a {
+  background-color: #f4777c;
+}
+.signup #wizard > .actions a,
+.signup #wizard > .actions a:hover,
+.signup #wizard > .actions a:active {
+  display: block;
+  background-color: #66b3d4;
+  padding: 9px 25px;
+  line-height: 1.573;
+  color: #fff;
+  border-radius: 3px;
+}
+.signup #wizard > .actions a[href="#previous"] {
+  background-color: #657e85;
+}
+.signup #wizard > .actions .disabled a,
+.signup #wizard > .actions .disabled a:hover,
+.signup #wizard > .actions .disabled a:active {
+  background-color: #a3b2b6;
+}
+.signup .signup__img-wrap .signup__img {
+  position: relative;
+  padding-top: 20%;
+}
+.signup .signup__img-wrap .signup__img__bg {
+  z-index: 1;
+  width: -webkit-fill-available;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 82%;
+  background: url("../img/bg01.png");
+  -webkit-animation: slide 5s linear infinite;
+  background-repeat-y: no-repeat;
+  transition: left 5s ease;
+}
+@media (max-width: 576px) {
+  .signup .signup__img-wrap .signup__img__bg {
+    height: 125%;
+  }
+}
+.signup .signup__img-wrap .signup__img__board__driveway {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+.signup .signup__img-wrap .signup__img__board__dotted-line {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.signup .signup__img-wrap .signup__img__board__dottedline {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 6%;
+  width: -webkit-fill-available;
+  height: 6px;
+  background: url("../img/dotted-line.png") repeat-x 0 0;
+  -webkit-animation: slide 4s linear infinite;
+}
+@media (max-width: 576px) {
+  .signup .signup__img-wrap .signup__img__board__dottedline {
+    bottom: 8%;
+    height: 3px;
+  }
+}
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -720px 0;
+  }
+}
+.signup .signup__img-wrap .signup__img__bus {
+  z-index: 3;
+  display: block;
+  width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 10%;
+  left: 2.5%;
+  transition: left 0.5s ease;
+}
+@media (max-width: 576px) {
+  .signup .signup__img-wrap .signup__img__bus {
+    width: 25%;
+  }
+}
+.signup .signup__img-wrap .signup__img__school {
+  z-index: 2;
+  display: block;
+  width: 30%;
+  height: auto;
+  position: absolute;
+  bottom: 20%;
+  left: 70%;
+  transition: left 0.5s ease;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=signup.css.map */

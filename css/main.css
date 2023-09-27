@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+.wrap {
+  background-color: unset;
+  height: 100%;
+}
+
+.main {
+  margin-top: 60px;
+}
+@media (max-width: 576px) {
+  .main {
+    margin: 0;
+    padding: 0.75rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 1023px) {
+  .main {
+    margin: 0;
+    padding: 0.75rem;
+  }
+}
+.main__pagettl {
+  align-items: center;
+  padding: 4rem 0;
+  text-align: center;
+}
+.main__pagettl h4.ttl-txt {
+  font-family: "HANAMDAUM";
+  font-size: 28px;
+  color: #343a40;
+  margin: 0 0 0.5rem;
+}
+.main__pagettl p.copy-txt {
+  font-family: "IBMPlexSansKR-Regular";
+  font-size: 16px;
+  margin: 0;
+}
+.main__pagettl p.copy-txt b.txt-point {
+  font-weight: bold;
+}
+.main__pagebody {
+  margin-top: 30px;
+}
+.main__pagebody .card-wrap {
+  display: block;
+}
+.main__pagebody .card-wrap .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.21);
+  border-width: 0;
+  margin: 0;
+}
+.main__pagebody .card-wrap .card__item {
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+  margin-bottom: 0;
+  background-image: linear-gradient(to right, #514A9D 0%, #24C6DC 100%);
+  background-repeat: repeat-x;
+  margin: 0 0 1rem;
+}
+.main__pagebody .card-wrap .card__item img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+  opacity: 0.35;
+  transition: all 0.2s ease-in-out;
+  width: 750px;
+  display: block;
+}
+.main__pagebody .card-wrap .card__item img:hover {
+  opacity: 0.9;
+}
+.main__pagebody .card-wrap .card__body {
+  padding: 2rem;
+  max-width: 750px;
+}
+.main__pagebody .card-wrap .card__body__ttl {
+  color: #333;
+}
+.main__pagebody .card-wrap .card__body__date {
+  color: #514A9D;
+  margin: 0;
+}
+.main__pagebody .card-wrap .card__body__line {
+  margin: 2rem 0;
+  background: gainsboro;
+  height: 1px;
+  border: 0;
+}
+@media (max-width: 576px) {
+  .main__pagebody .card-wrap .card__body {
+    padding: 2rem 1rem;
+  }
+}
+.main__pagebody .card-wrap .card__body .reply-wrap {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+  padding: 0;
+  text-align: center;
+  margin: 2rem 0;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply {
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  text-align: start;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  border: 0;
+  z-index: 1;
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 90%;
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply__arrow {
+  position: absolute;
+  display: block;
+  left: calc((0.5rem + 1px) * -1);
+  width: 0.5rem;
+  height: 1rem;
+  margin: 0.3rem 0;
+  top: 30%;
+  margin-top: -5px;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply__arrow::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0.5rem 0.5rem 0.5rem 0;
+  left: 1px;
+  border-right-color: #eaeaea;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply__header {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  margin: 0;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply__body p {
+  color: #222;
+  margin: 0 0 0.5rem;
+}
+.main__pagebody .card-wrap .card__body .reply-wrap .reply-date p {
+  margin: 0.5rem;
+  text-align: right;
+  color: gainsboro;
+}
+.main__pagebody .card-wrap .card__body__input textarea {
+  border-color: gainsboro;
+  padding: 1rem;
+  width: 100%;
+}
+.main__pagebody .card-wrap .card__body__input button {
+  margin-top: 1rem;
+  border: 0;
+  padding: 8px 14px;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: #333;
+  box-sizing: border-box;
+  letter-spacing: -0.16px;
+}
+.main__pagebody .card-wrap .card__body__input button:hover {
+  cursor: pointer;
+}
+.main__pagebody .card-wrap .card__body__btn-wrap {
+  text-align: right;
+}
+.main__pagebody .card-wrap .card .btn-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  max-width: 40%;
+  margin: 4rem auto 5rem;
+}
+@media (max-width: 576px) {
+  .main__pagebody .card-wrap .card .btn-wrap {
+    max-width: 60%;
+  }
+}
+.main__pagebody .card-wrap .card .btn-wrap .join-btn {
+  border: 1px solid transparent;
+  padding: 1rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #fff;
+  background: linear-gradient(-300deg, #3daf70, #0081b8);
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  border: 0;
+  font-family: "HANAMDAUM";
+}
+.main__pagebody .card-wrap .card .btn-wrap #showPrize {
+  margin-top: -3rem;
+  background: linear-gradient(-60deg, #0081b8, #3daf70);
+}
+.main .evt-footer {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+/*# sourceMappingURL=main.css.map */

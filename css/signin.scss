@@ -1,0 +1,377 @@
+@import "./utils";
+
+.signin {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 21%);
+    width: 720px;
+    height: unset;
+    padding: 40px;
+    overflow: auto;
+
+    @include mobile {
+        width: 100vw;
+        padding: 0;
+        background-color: #fff;
+        border-radius: 3px;
+        height: unset;
+        box-shadow: unset;
+    }
+
+//____________________ logo ____________________
+
+    &__logo {
+        font-weight: 700;
+        color: #343a40;
+        text-align: center;
+        font-size: 28px;
+
+        & img {
+            width: 30%;
+            display: block;
+            margin: 0 auto 20px;
+
+            @include mobile {
+                margin: 1rem auto;
+            }
+        }
+        & img.signin__logo__bi {
+            @include mobile {
+                // padding-top: 10rem;
+            }
+        }
+    }
+
+//____________________ btn ____________________
+
+    &__btn {
+        margin: 2.5rem auto;
+        text-align: center;
+        font-family: "HANAMDAUM";
+
+        @include mobile {
+            padding: 0 5%;
+        }
+
+        &__login, &__signup {
+            cursor: pointer;
+            overflow: visible;
+            text-transform: none;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.65rem 0.75rem;
+            line-height: 1.5;
+            border-radius: 3px;
+            // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            display: inline-block;
+            width: 30%;
+            font-family: inherit;
+            font-size: 1rem;
+
+            @include mobile {
+                display: block;
+                width: 75%;
+                margin: 0.5rem auto;
+            }
+        }
+        &__login {
+            // font-family: 'IBMPlexSansKR-Regular';
+            color: #fff;
+            background-color: #333;
+            margin-right: 5%;
+            font-size: 0.75rem;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            & .layout {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & svg {
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &:hover {
+                background-color: #111;
+            }
+        }
+        &__signup {
+            color: #657E85;
+            background-color: transparent;
+            background-image: none;
+            border-color: #657E85;
+            width: 90%;
+            padding: 1rem;
+
+            &:hover {
+                background-color: rgba(167, 173, 179, 0.082);
+            }
+        }
+
+        &.lost {
+            
+            & > button {
+                display: block;
+                width: 50%;
+                padding: 0.5rem;
+                font-size: 1rem;
+                color: #657E85;
+                background-color: transparent;
+                background-image: none;
+                border-color: #657E85;
+                margin: 0.5rem auto;
+
+                &:hover {
+                    background-color: rgba(167, 173, 179, 0.082);
+                }
+            }
+        }
+    }
+
+//____________________ input ____________________
+
+    &__input {
+        margin: 2.5rem auto;
+        text-align: center;
+        font-family: "IBMPlexSansKR-Regular";
+
+        &__id, &__pw {
+            display: block;
+            overflow: visible;
+            font-family: inherit;
+            display: block;
+            width: 50%;
+            height: calc(2.6125rem + 2px);
+            padding: 0.65rem 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 3px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            margin: 0.5rem auto;
+
+            @include mobile {
+                width: 75%;
+            }
+        }
+
+        &__lost {
+            display: block;
+            margin: 0.25rem 25% 0.75rem;
+            text-align: left;
+
+            @include mobile {
+                margin: 0.5rem 12.5%;
+            }
+        }
+
+        &__btn__login {
+            display: block;
+            margin: 0.25rem auto;
+            cursor: pointer;
+            overflow: visible;
+            text-transform: none;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.65rem 0.75rem;
+            line-height: 1.5;
+            border-radius: 3px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            display: inline-block;
+            width: 50%;
+            font-family: inherit;
+            font-size: 1rem;
+
+            @include mobile {
+                width: 75%;
+            }
+        }
+        &__btn__login {
+            color: #fff;
+            background-color: #657E85;
+            &:hover {
+                background-color: #506970;
+            }
+        }
+    }
+
+    //____________________ sns ____________________
+
+    &__sns {
+        margin-top: 2rem;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        
+        @include mobile {
+            width: 60%;
+        }
+
+        &__layout {
+            & > img {
+                width: 2rem;
+            }
+        }
+
+        &__kakao{
+            background-color: #feb914;
+        }
+
+        &__naver{
+            background-color: #45b97c;
+
+            & img {
+                width: 1.5rem;
+            }
+        }
+
+        &__instar{
+            background: #f47321;
+        }
+
+        &__google{
+            background-color: #0081b7;
+
+            & img {
+                width: 1.75rem;
+            }
+        }
+
+        &__copy {
+            text-align: center;
+            margin: 1rem auto;
+        }    
+
+        &__wrap {
+            display: flex;
+            justify-content: space-around;
+
+            & > div {
+                display: flex;
+                width: 55px;
+                height: 55px;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                color: #fff;
+                border-radius: 50% !important;
+            }
+            // & div{
+            // }
+        }
+
+    }
+
+    //____________________ account ____________________
+    
+    &__account {
+        display: block;
+        width: 50%;
+        margin: 5rem auto 2rem;
+        text-align: center;
+        
+        @include mobile {
+            width: 75%;
+        }
+    }
+
+    //____________________ lost&found ____________________
+
+    & .find-form {
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 3px;
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        &__insert-section {
+            padding: 4rem 2rem;
+        }
+    }
+    
+/*
+    // account
+    &__account {}
+
+    // sns
+    &__sns {}
+*/
+
+    .sns {
+
+        text-align: center;
+        margin: 2rem 0;
+
+        &__btn-wrap {
+
+
+        }
+
+        &__btn {
+            
+            width: 44%;
+            border: 0;
+            padding: 1rem 0;
+            margin: 0.2rem 0.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 0.2rem;
+
+            & img {
+                width: 1rem;
+                margin-right: 1rem;
+            }
+
+            // & span {
+            //     font-size: 1rem;
+            //     line-height: 1rem;
+            // }
+
+            & .layout {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &.naver {
+                background-color: #03c75a;
+                color: #fff;
+            }
+            &.kakao {
+                background-color: #fee500;
+                color: #000;
+            }
+            &.facebook {
+                background-color: #3c5ca9;
+                color: #fff;
+            }
+            &.google {
+                background-color: #eee;
+                color: #6d6d6d;
+            }
+            &.instagram {
+                background: #d6249f;
+                background: radial-gradient(ellipse  at 10% 120%, #fdf497 0%, #fdf497 2%, #fd5949 48%,#d6249f 60%,#285AEB 90%);
+                color: #fff;
+            }
+        }
+    }
+
+}
+

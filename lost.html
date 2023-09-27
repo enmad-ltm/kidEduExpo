@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대교 유아교육박람회 이벤트</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/signin.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="signin">
+            <div class="signin__logo">
+                <img src="./img/bigschool_logo.png" alt="세상에서 가장큰학교 로고 이미지" class="signin__logo__bi">
+                <img src="./img/dklogo.png" alt="대교 로고 이미지" class="signin__logo__ci">
+            </div>
+            <div class="signin__btn lost">
+                <button class="signin__btn__login" alt="이메일주소 찾기" title="이메일주소 찾기" onclick="setFindMailForm()">이메일주소 찾기</button>
+                <button class="signin__btn__signup" alt="비밀번호 찾기" title="비밀번호 찾기" onclick="setFindPassForm()">비밀번호 찾기</button>
+            </div>
+            <div class="signin__input lost-email d-none">
+                <input id="findMailName" type="text" name="ipId" class="signin__input__id" placeholder="이름" alt="이름 입력" title="회원가입시 등록된 이름을 입력해주세요" />
+                <input id="findMailPhone" type="number" name="ipPw" class="signin__input__pw" placeholder="휴대폰번호" alt="휴대폰번호 입력" title="회원가입시 등록된 휴대폰번호를 입력해주세요" />
+                <button id="findMailBtn" type="button" class="signin__input__btn__login" alt="이메일찾기 버튼" title="이메일찾기 버튼">이메일주소 찾기</button>
+            </div>
+            <div class="signin__input lost-password d-none">
+                <input id="findPasswordMail" type="text" name="ipId" class="signin__input__id" placeholder="이메일" alt="이메일 입력" title="회원가입시 등록된 이메일을 입력해주세요" />
+                <input id="findPasswordPhone" type="number" name="ipPw" class="signin__input__pw" placeholder="휴대폰번호" alt="휴대폰번호 입력" title="회원가입시 등록된 휴대폰번호를 입력해주세요" />
+                <button id="findPasswordBtn" type="button" class="signin__input__btn__login" alt="비밀번호 버튼" title="비밀번호 버튼">비밀번호 찾기</button>
+            </div>
+            <!--  -->
+            <div class="res-guider d-none">
+                <div class="resGuider__true">귀하의 등록된 메일 주소입니다.</div>
+            </div>
+            <!--  -->
+            <div class="find-form d-none">
+                <div class="find-form__insert-section"></div>
+            </div>
+            <div class="go-back">
+                <a href="javascript:history.back()">뒤로가기</a>
+            </div>
+            <div class="go-home d-none">
+                <a href="./index.html">홈으로</a>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/signup.js"></script>
+    <script src="./js/lost.js"></script>
+</body>
+</html>

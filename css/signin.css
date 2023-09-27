@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+.signin {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.21);
+  width: 720px;
+  height: unset;
+  padding: 40px;
+  overflow: auto;
+  /*
+      // account
+      &__account {}
+
+      // sns
+      &__sns {}
+  */
+}
+@media (max-width: 576px) {
+  .signin {
+    width: 100vw;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 3px;
+    height: unset;
+    box-shadow: unset;
+  }
+}
+.signin__logo {
+  font-weight: 700;
+  color: #343a40;
+  text-align: center;
+  font-size: 28px;
+}
+.signin__logo img {
+  width: 30%;
+  display: block;
+  margin: 0 auto 20px;
+}
+@media (max-width: 576px) {
+  .signin__logo img {
+    margin: 1rem auto;
+  }
+}
+.signin__btn {
+  margin: 2.5rem auto;
+  text-align: center;
+  font-family: "HANAMDAUM";
+}
+@media (max-width: 576px) {
+  .signin__btn {
+    padding: 0 5%;
+  }
+}
+.signin__btn__login, .signin__btn__signup {
+  cursor: pointer;
+  overflow: visible;
+  text-transform: none;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.65rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  display: inline-block;
+  width: 30%;
+  font-family: inherit;
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  .signin__btn__login, .signin__btn__signup {
+    display: block;
+    width: 75%;
+    margin: 0.5rem auto;
+  }
+}
+.signin__btn__login {
+  color: #fff;
+  background-color: #333;
+  margin-right: 5%;
+  font-size: 0.75rem;
+}
+@media (max-width: 576px) {
+  .signin__btn__login {
+    width: 100%;
+  }
+}
+.signin__btn__login .layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin__btn__login .layout svg {
+  margin-right: 0.5rem;
+}
+.signin__btn__login:hover {
+  background-color: #111;
+}
+.signin__btn__signup {
+  color: #657E85;
+  background-color: transparent;
+  background-image: none;
+  border-color: #657E85;
+  width: 90%;
+  padding: 1rem;
+}
+.signin__btn__signup:hover {
+  background-color: rgba(167, 173, 179, 0.082);
+}
+.signin__btn.lost > button {
+  display: block;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #657E85;
+  background-color: transparent;
+  background-image: none;
+  border-color: #657E85;
+  margin: 0.5rem auto;
+}
+.signin__btn.lost > button:hover {
+  background-color: rgba(167, 173, 179, 0.082);
+}
+.signin__input {
+  margin: 2.5rem auto;
+  text-align: center;
+  font-family: "IBMPlexSansKR-Regular";
+}
+.signin__input__id, .signin__input__pw {
+  display: block;
+  overflow: visible;
+  font-family: inherit;
+  display: block;
+  width: 50%;
+  height: calc(2.6125rem + 2px);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 0.5rem auto;
+}
+@media (max-width: 576px) {
+  .signin__input__id, .signin__input__pw {
+    width: 75%;
+  }
+}
+.signin__input__lost {
+  display: block;
+  margin: 0.25rem 25% 0.75rem;
+  text-align: left;
+}
+@media (max-width: 576px) {
+  .signin__input__lost {
+    margin: 0.5rem 12.5%;
+  }
+}
+.signin__input__btn__login {
+  display: block;
+  margin: 0.25rem auto;
+  cursor: pointer;
+  overflow: visible;
+  text-transform: none;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.65rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  width: 50%;
+  font-family: inherit;
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  .signin__input__btn__login {
+    width: 75%;
+  }
+}
+.signin__input__btn__login {
+  color: #fff;
+  background-color: #657E85;
+}
+.signin__input__btn__login:hover {
+  background-color: #506970;
+}
+.signin__sns {
+  margin-top: 2rem;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .signin__sns {
+    width: 60%;
+  }
+}
+.signin__sns__layout > img {
+  width: 2rem;
+}
+.signin__sns__kakao {
+  background-color: #feb914;
+}
+.signin__sns__naver {
+  background-color: #45b97c;
+}
+.signin__sns__naver img {
+  width: 1.5rem;
+}
+.signin__sns__instar {
+  background: #f47321;
+}
+.signin__sns__google {
+  background-color: #0081b7;
+}
+.signin__sns__google img {
+  width: 1.75rem;
+}
+.signin__sns__copy {
+  text-align: center;
+  margin: 1rem auto;
+}
+.signin__sns__wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.signin__sns__wrap > div {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50% !important;
+}
+.signin__account {
+  display: block;
+  width: 50%;
+  margin: 5rem auto 2rem;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .signin__account {
+    width: 75%;
+  }
+}
+.signin .find-form {
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px;
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.signin .find-form__insert-section {
+  padding: 4rem 2rem;
+}
+.signin .sns {
+  text-align: center;
+  margin: 2rem 0;
+}
+.signin .sns__btn {
+  width: 44%;
+  border: 0;
+  padding: 1rem 0;
+  margin: 0.2rem 0.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.2rem;
+}
+.signin .sns__btn img {
+  width: 1rem;
+  margin-right: 1rem;
+}
+.signin .sns__btn .layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin .sns__btn.naver {
+  background-color: #03c75a;
+  color: #fff;
+}
+.signin .sns__btn.kakao {
+  background-color: #fee500;
+  color: #000;
+}
+.signin .sns__btn.facebook {
+  background-color: #3c5ca9;
+  color: #fff;
+}
+.signin .sns__btn.google {
+  background-color: #eee;
+  color: #6d6d6d;
+}
+.signin .sns__btn.instagram {
+  background: #d6249f;
+  background: radial-gradient(ellipse at 10% 120%, #fdf497 0%, #fdf497 2%, #fd5949 48%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+}
+
+/*# sourceMappingURL=signin.css.map */

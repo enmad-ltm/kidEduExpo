@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대교 유아교육박람회 이벤트</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/signin.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="signin">
+            <div class="signin__logo">
+                <img src="./img/bigschool_logo.png" alt="세상에서 가장큰학교 로고 이미지" class="signin__logo__bi">
+                <img src="./img/dklogo.png" alt="대교 로고 이미지" class="signin__logo__ci">
+            </div>
+            <div class="signin__btn">
+                <button class="signin__btn__login d-none" alt="로그인 바로가기" title="로그인 바로가기" onclick="go2signIn()">로그인</button>
+                <button class="signin__btn__signup" alt="회원가입 바로가기" title="회원가입 바로가기" onclick="go2page('signup')">세상에서 가장큰학교 회원가입</button>
+            </div>
+            <div class="sns signup-sns">
+                <div class="sns__btn-wrap">
+                    <button class="sns__btn naver">
+                        <div class="layout">
+                            <img src="./img/naver-logo.png" alt="">
+                            <span>네이버로 간편가입</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn kakao">
+                        <div class="layout">
+                            <img src="./img/kakao-logo-bk.png" alt="">
+                            <span>카카오로 간편가입</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn instagram">
+                        <div class="layout">
+                            <img src="./img/instar-logo.png" alt="">
+                            <span>인스타그램으로 간편가입</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn google">
+                        <div class="layout">
+                            <img src="./img/google-logo-color.png" alt="">
+                            <span>구글로 간편가입</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="signin__btn tx-right">
+                <button class="signin__btn__login" alt="로그인 바로가기" title="로그인 바로가기" onclick="go2signIn()">
+                    <div class="layout">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="1.5rem" height="1.5rem">
+                            <path d="M192 176v-40a40 40 0 0140-40h160a40 40 0 0140 40v240a40 40 0 01-40 40H240c-22.09 0-48-17.91-48-40v-40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                            <path fill="rgb(255,255,255)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M288 336l80-80-80-80M80 256h272"/>
+                        </svg>
+                        <span class="body-font">기존회원 로그인</span>
+                    </div>
+                </button>
+            </div>
+            <div class="signin__input d-none">
+                <form id="generalLoginForm" action="">
+                    <input type="text" name="ipId" class="signin__input__id" placeholder="이메일주소" alt="이메일주소 입력" title="이메일주소 입력" onkeyup="if(window.event.keyCode==13){login()}" />
+                    <input type="password" name="ipPw" class="signin__input__pw" placeholder="비밀번호" alt="비밀번호 입력" title="비밀번호 입력" onkeyup="if(window.event.keyCode==13){login()}" />
+                    <div class="signin__input__lost">
+                        <a art="계정 정보 분실 페이지" title="계정 정보 분실 페이지" href="./lost.html">계정 정보를 잊어버렸어요</a>
+                    </div>
+                    <button type="button" class="signin__input__btn__login" alt="로그인 버튼" title="로그인 버튼" onclick="login()">로그인</button>
+                </form>
+            </div>
+            <div class="sns signin-sns d-none">
+                <div class="sns__btn-wrap">
+                    <button class="sns__btn naver">
+                        <div class="layout">
+                            <img src="./img/naver-logo.png" alt="">
+                            <span>네이버로 간편로그인</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn kakao">
+                        <div class="layout">
+                            <img src="./img/kakao-logo-bk.png" alt="">
+                            <span>카카오로 간편로그인</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn instagram">
+                        <div class="layout">
+                            <img src="./img/instar-logo.png" alt="">
+                            <span>인스타그램으로 간편로그인</span>
+                        </div>
+                    </button>
+                    <button class="sns__btn google">
+                        <div class="layout">
+                            <img src="./img/google-logo-color.png" alt="">
+                            <span>구글로 간편로그인</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!--
+            <div class="signin__sns d-none">
+                <div class="signin__sns__copy" alt="SNS 간편 로그인" title="SNS 간편 로그인">SNS 간편 로그인</div>
+                <div class="signin__sns__wrap">
+                    <div class="signin__sns__instar">
+                        <div class="signin__sns__layout">
+                            <img src="./img/instar-logo.png" alt="인스타그램 SNS로그인" title="인스타그램 SNS로그인">
+                        </div>
+                    </div>
+                    <div class="signin__sns__kakao">
+                        <div class="signin__sns__layout">
+                            <img src="./img/kakao-logo.png" alt="카카오톡 SNS로그인" title="카카오톡 SNS로그인">
+                        </div>
+                    </div>
+                    <div class="signin__sns__naver">
+                        <div class="signin__sns__layout">
+                            <img src="./img/naver-logo.png" alt="네이버 SNS로그인" title="네이버 SNS로그인">
+                        </div>
+                    </div>
+                    <div class="signin__sns__google">
+                        <div class="signin__sns__layout">
+                            <img src="./img/google-logo.png" alt="구글 SNS로그인" title="구글 SNS로그인">
+                        </div>
+                    </div>
+                </div>
+            </div>
+             -->
+            <div class="signin__account d-none">
+                <span>아직 계정이 없으신가요?</span>&nbsp;<a href="./index.html" alt="회원 가입 페이지" title="회원 가입 페이지">회원 가입</a>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/signin.js"></script>
+</body>
+</html>
+<!-- 
+    
+
+대교 색상
+
+ci grey
+#657E85
+
+주
+#f47321
+노
+feb914
+초
+#45b97c
+파
+#0081b7
+섞
+background: linear-gradient(135deg, #0081b8, #3daf70, #f6bb00, #e97000);
+
+
+ -->

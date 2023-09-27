@@ -1,0 +1,134 @@
+// base
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HANAMDAUM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/HANAMDAUM.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+@font-face {
+  font-family: 'HANAMDAUM_BODY';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/HANAMDAUM.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@-ms-viewport {
+    width: device-width;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: "IBMPlexSansKR-Regular", "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #868ba1;
+    text-align: left;
+    background-color: #E9ECEF;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+a {
+    color: #0866C6;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit; }
+
+h1, .h1 {
+  font-size: 2.1875rem; 
+}
+
+h2, .h2 {
+  font-size: 1.75rem; 
+}
+
+h3, .h3 {
+  font-size: 1.53125rem; 
+}
+
+h4, .h4 {
+  font-size: 1.3125rem; 
+}
+
+h5, .h5 {
+  font-size: 1.09375rem; 
+}
+
+h6, .h6 {
+  font-size: 0.875rem; 
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1rem; 
+}
+
+input, button {
+  overflow: visible;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus, select:focus {
+  outline-color: #657e85;
+}
+
+textarea:focus {
+  outline-style: none;
+}
+textarea::placeholder {color:#ccc}
+
+button {
+  border-radius: 0;
+  margin: 0;
+}
